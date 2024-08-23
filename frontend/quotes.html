@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Manager</title>
+    <link rel="stylesheet" href="styles.css"> <!-- если у вас есть стили -->
+</head>
+<body>
+    <h1>Quote Manager</h1>
+
+    <!-- Форма для добавления новой цитаты -->
+    <form id="add-quote-form">
+        <label for="quote-text">Quote:</label>
+        <textarea id="quote-text" required></textarea><br>
+        <label for="quote-topic">Topic:</label>
+        <input type="text" id="quote-topic" required><br>
+        <button type="submit">Add Quote</button>
+    </form>
+
+    <hr>
+
+    <!-- Форма для поиска цитат -->
+    <form id="search-quote-form">
+        <label for="search-term">Search for quotes:</label>
+        <input type="text" id="search-term" required><br>
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+
+    <!-- Область для отображения результатов поиска -->
+    <div id="search-results"></div>
+
+    <script src="script.js"></script> <!-- подключаем JavaScript -->
+</body>
+</html>
