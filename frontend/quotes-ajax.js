@@ -4,7 +4,7 @@ document.getElementById('add-quote-form').addEventListener('submit', function(e)
     const quoteText = document.getElementById('quote-text').value;
     const quoteTopic = document.getElementById('quote-topic').value;
 
-    fetch('/quotes', {
+    fetch('/api/quotes', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
