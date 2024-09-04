@@ -1,0 +1,4 @@
+com\quotesapp\quotes\repository\QuoteRepository.class
+com\quotesapp\quotes\controller\QuoteController.class
+com\quotesapp\quotes\StartQuotesModul.class
+com\quotesapp\quotes\model\Quote.class
