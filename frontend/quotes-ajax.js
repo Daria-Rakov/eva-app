@@ -14,7 +14,12 @@ document.getElementById('add-quote-form').addEventListener('submit', function(e)
             topic: quoteTopic
         })
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Server error: ${response.status}`);
+        }
+        return response.json();  // Пытаемся парсить только если ответ в формате JSON
+    })
     .then(data => {
         alert('Quote added successfully');
         document.getElementById('quote-text').value = '';
@@ -29,7 +34,12 @@ document.getElementById('search-quote-form').addEventListener('submit', function
     const searchTerm = document.getElementById('search-term').value;
 
     fetch(`http://localhost:8080/quotes/search?term=${searchTerm}`)  // Обновленный URL
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Server error: ${response.status}`);
+        }
+        return response.json();  // Пытаемся парсить только если ответ в формате JSON
+    })
     .then(data => {
         const resultsDiv = document.getElementById('search-results');
         resultsDiv.innerHTML = ''; // очищаем предыдущие результаты
