@@ -4,7 +4,7 @@ document.getElementById('add-quote-form').addEventListener('submit', function(e)
     const quoteText = document.getElementById('quote-text').value;
     const quoteTopic = document.getElementById('quote-topic').value;
 
-    fetch('/api/quotes', {
+    fetch('http://localhost:8080/api/quotes', {  // Обновленный URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ document.getElementById('search-quote-form').addEventListener('submit', function
     
     const searchTerm = document.getElementById('search-term').value;
 
-    fetch(`/quotes/search?term=${searchTerm}`)
+    fetch(`http://localhost:8080/quotes/search?term=${searchTerm}`)  // Обновленный URL
     .then(response => response.json())
     .then(data => {
         const resultsDiv = document.getElementById('search-results');
