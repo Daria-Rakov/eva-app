@@ -4,7 +4,7 @@ document.getElementById('add-quote-form').addEventListener('submit', function(e)
     const quoteText = document.getElementById('quote-text').value;
     const quoteTopic = document.getElementById('quote-topic').value;
 
-    fetch('http://localhost:8080/api/quotes', {  // Обновленный URL
+    fetch('http://localhost:8080/quotes', {  // Обновленный URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
